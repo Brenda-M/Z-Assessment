@@ -1,0 +1,5 @@
+SELECT institution.name AS "INSTITUTION NAME", course.name AS "COURSE NAME",COUNT(*) AS "NUMBER OF STUDENTS"
+FROM student
+JOIN course ON course.courseid = student.course
+JOIN institution ON course.institution = institution.institutionid
+GROUP BY course
